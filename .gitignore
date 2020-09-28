@@ -1,0 +1,5 @@
+*.tfstate*
+crash.log
+.DS_Store
+PITCHME/
+run.sh
