@@ -30,10 +30,6 @@
       "scripts": [
         "../../scripts/PackerProvision.ps1"
       ],
-      "environment_vars": [
-        "AZURE_SAS={{user `azure_sas`}}",
-        "AZURE_CONTAINER={{user `azure_container`}}"
-      ],
       "type": "powershell"
     },
     {
@@ -48,8 +44,6 @@
     }
   ],
   "variables": {
-    "azure_sas": "{{env `AZURE_SAS`}}",
-    "azure_container": "{{env `AZURE_CONTAINER`}}",
     "circle_build_num": "{{env `CIRCLE_BUILD_NUM`}}",
     "client_id": "{{env `ARM_CLIENT_ID`}}",
     "client_secret": "{{env `ARM_CLIENT_SECRET`}}",
