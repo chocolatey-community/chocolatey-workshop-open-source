@@ -1,5 +1,8 @@
 # Configure the Microsoft Azure Provider
-provider "azurerm" {}
+provider "azurerm" {
+  version = "=2.3.0"
+  features {}
+}
 
 # Create a resource group
 resource "azurerm_resource_group" "global" {

@@ -32,7 +32,7 @@ resource "azurerm_public_ip" "windows" {
   idle_timeout_in_minutes      = 30
   location                     = "${var.location}"
   name                         = "windows-${format("%02d", count.index + 1)}-publicip"
-  public_ip_address_allocation = "dynamic"
+  allocation_method            = "Dynamic"
   resource_group_name          = "${azurerm_resource_group.global.name}"
 }
 
@@ -40,7 +40,6 @@ resource "azurerm_storage_container" "windows" {
   container_access_type = "private"
   count                 = "${var.count}"
   name                  = "windows-${format("%02d", count.index + 1)}-storage"
-  resource_group_name   = "${azurerm_resource_group.global.name}"
   storage_account_name  = "${azurerm_storage_account.global.name}"
 }
 
